@@ -2,7 +2,7 @@
 
 Original idea by AwyrenMMO; improvements, stability fixes, and reorganization by Fracurul.
 
-A discord bot for managing events GvG & Raids.
+A discord bot for managing GvG events and Raids.
 
 ## 📁 Project Structure
 
@@ -21,7 +21,7 @@ src/
 │   ├── eventService.js           # Events logic
 │   ├── discordService.js         # Discord functions (embeds, messages)
 │   ├── sheetService.js           # Google Sheets API
-│   └── sheetOperations.js        # Complex operations Sheets
+│   └── sheetOperations.js        # Complex Google Sheets operations
 ├── handlers/
 │   ├── errors.js                 # Global error handling
 │   ├── events.js                 # Event ClientReady
@@ -64,7 +64,7 @@ npm start
 - **sheetOperations**: Format complex operations
 
 ### Handlers
-- **errors**:  Global errors not captured
+- **errors**: Global error handling
 - **events**: Initialization and cleaning
 - **interactions**: Slash commands and buttons
 
@@ -73,16 +73,16 @@ npm start
 - **validation**: Permissions, dates, searches
 - **retry**: Automatically retries with exponential backoff
 
-## 🔧 Adding new command
+## 🔧 Adding a new command
 
 1. Create logic at `eventService.js` or new service
-2. Add the command definiton at `handlers/events.js`
+2. Add the command definition at `handlers/events.js`
 3. Implement the handler at `handlers/interactions.js`
 
 ## ✅ Benefits of This Structure
 
 - **Modular**: Each file has its own responsibility
-- **Testable**: Services without discord dependencies
+- **Testable**: Services are independent of Discord-specific dependencies.
 - **Maintainable**: Easy to find and fix bugs
-- **Scalability**: AAdding new features is simple
+- **Scalability**: Adding new features is simple
 - **Clean**: separation of concerns
