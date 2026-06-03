@@ -21,7 +21,7 @@ src/
 │   ├── eventService.js           # Events logic
 │   ├── discordService.js         # Discord functions (embeds, messages)
 │   ├── sheetService.js           # Google Sheets API
-│   └── sheetOperations.js        # Complex Google Sheets operations
+│   └── sheetOperations.js        # Advanced Google Sheets operations
 ├── handlers/
 │   ├── errors.js                 # Global error handling
 │   ├── events.js                 # Discord event handlers
@@ -43,8 +43,8 @@ npm install
 1. Copy `.env.example` to `.env`
 2. Fill in the environment variables:
 	- `TOKEN`: Discord bot token.
-	- `CLIENT_ID`: Client ID from Discord.
-	- `GUILD_ID`: Server ID (Guild)
+	- `CLIENT_ID`: Discord application client ID.
+	- `GUILD_ID`: Discord server (guild) ID.
 	- `GOOGLE_CREDENTIALS`: (Optional) Google credentials.
 	- `SPREADSHEET_ID`: (Optional) Google Sheets document ID.
 
@@ -57,21 +57,21 @@ npm start
 ## 📚 Modules
 
 ### Services
-- **dataService**: Load/save data.json
+- **dataService**: Load/save data.json.
 - **eventService**: Pure events logic (without Discord)
-- **discordService**: Embeds, buttons, messages
-- **sheetService**: Google Sheets API connection
-- **sheetOperations**: Format complex operations
+- **discordService**: Embeds, buttons, messages.
+- **sheetService**: Google Sheets API connection.
+- **sheetOperations**: Advanced Google Sheets operations.
 
 ### Handlers
-- **errors**: Global error handling
-- **events**: Initialization and cleaning
-- **interactions**: Slash commands and buttons
+- **errors**: Global error handling.
+- **events**: Initialization and cleaning.
+- **interactions**: Slash commands and buttons.
 
 ### Utils
-- **helpers**: Formatting, names, emotes
-- **validation**: Permissions, dates, searches
-- **retry**: Automatically retries with exponential backoff
+- **helpers**: Formatting, names, emotes.
+- **validation**: Permissions, dates, searches.
+- **retry**: Automatically retries with exponential backoff.
 
 ## 🔧 Adding a new command
 
@@ -81,8 +81,8 @@ npm start
 
 ## ✅ Benefits of This Structure
 
-- **Modular**: Each file has its own responsibility
+- **Modular**: Each file has its own responsibility.
 - **Testable**: Services are independent of Discord-specific dependencies.
-- **Maintainable**: Easy to find and fix bugs
-- **Scalability**: Adding new features is simple
-- **Clean**: Separation of concerns
+- **Maintainable**: Easy to find and fix bugs.
+- **Scalability**: Adding new features is simple.
+- **Clean**: Separation of concerns.
